@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;600&display=swap');
+:root {
+    --openSans: 'Open Sans Condensed', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+.container {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    grid-template-rows: 80px 94vh;
+    grid-template-areas: "nav nav"
+                         "aside movies";
+}
+/* ----------- areas */
+.nav {
+    grid-area: nav;
+}
+.aside {
+    grid-area: aside;
+}
+.movies {
+    grid-area: movies;
+}
+a {
+    text-decoration: none;
+}
+/* ----------- fin areas */
+h1, h2, h3, h4, p {
+    letter-spacing: .8px;
+}
+/* ----------- navbar */
+/* ----------- script */
+.dimensionar {
+    font-size: 30px;
+}
+/* ----------- fin script */
+nav {
+    background-color: white;
+    /* width: 100%; */
+    height: 100%;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.171);
+}
+nav ul {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul div {
+    display: inherit;
+    align-items: center;
+    margin: 10px 0;
+}
+nav ul div:first-child {
+    margin-left: 30px;
+}
+nav ul div:last-child {
+    margin-right: 30px;
+}
+.logoBlock {
+    width: calc(100% / 3 * 1);
+    max-width: 300px;
+}
+.logoBlock h1 {
+    color: #ff4b1f;
+    font-weight: bold;
+}
+.logoBlock figure {
+    width: 60px;
+}
+.logoBlock figure img {
+    width: 100%;
+}
+.input {
+    width: calc(100% / 3 * 1);
+}
+.input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.accountBlock a {
+    display: inherit;
+    font-family: var(--openSans);
+    color: black;
+}
+.accountBlock h2 {
+    margin: 0 10px;
+}
+.accountBlock figure {
+    width: 50px;
+    height: 40px;;
+}
+.accountBlock figure img {
+    width: 100%;
+    border-radius: 30px;
+}
+/* ----------- fin navbar */
+/* ----------- asidebar */
+.asidebarBox {
+    background: #ff4b1f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9068, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 30px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.asidebarBox a {
+    font-family: var(--openSans);
+    text-align: center;
+    color: white;
+    transition: .5s;
+    font-size: 16px;
+}
+.home,
+.trending,
+.likes,
+.settings {
+    text-align: center;
+    height: 80px;
+    width: 80px;
+}
+.link {
+    margin: 5px;
+}
+.link h4 {
+    height: 50%;
+}
+.icoDimension {
+    height: 50%;
+}
+i {
+    font-size: 25px;
+    transition: .3s;
+}
+/* .link1,
+.link2,
+.link3,
+.link4{
+    transition: .2s;
+} */
+/* ----------- fin asidebar */
+/* ----------- Catálogo */
+.moviesBlock .movies {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, 275px);
+    padding: 30px;
+}
+.movie {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+.movie figure {
+    height: 100%;
+}
+.movie figure img {
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.movieDesc {
+    font-family: var(--openSans);
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    background: #ff4c1fb9;
+    transition: .5s;
+}
+.movieDesc:hover {
+    height: 100%;
+}
+.movieDesc h3 {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 50px;
+}
+.movieDesc h3, p {
+    color: white;
+    padding: 0 20px;
+}
+/* ----------- fin catálogo */
